@@ -22,7 +22,7 @@ DB_NAME      = os.path.join(BASE_DIR, "medical_data.db")
 MEDIA_FOLDER = os.path.join(BASE_DIR, "patient_media")
 
 # --- PDF CONFIG ---
-FONT_SIZE        = 9
+FONT_SIZE        = 10
 
 # Hoja carta: 21.59 x 27.94 cm
 LETTER_WIDTH     = 21.59 * cm
@@ -36,7 +36,7 @@ TOP_MARGIN = 4 * cm
 MARGIN_LEFT  = 1.5  * cm           # margen izquierdo general
 NAME_X       = 2.0  * cm           # nombre arranca aquí
 AGE_X        = 2.0  * cm + 11.5 * cm   # edad a 10 cm del margen izq
-DATE_X       = 2.5  * cm + 10  * cm + 3 * cm   # fecha a 13 cm del margen izq
+DATE_X       = 2.5  * cm + 11  * cm + 3.5 * cm   # fecha a 13 cm del margen izq
 MARGIN_RIGHT = 1.5  * cm           # margen derecho general
 
 # Espacio entre línea de cabecera y cuerpo: 1 cm

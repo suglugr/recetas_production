@@ -1,12 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
+from PyInstaller.utils.hooks import collect_data_files
+
+datas = []
+datas += collect_data_files('customtkinter')
 
 
 a = Analysis(
     ['gui.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=[],
+    datas=datas,
+    hiddenimports=['PIL', 'PIL._imagingtk', 'reportlab'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -35,4 +39,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    version='version_info.txt',
 )
