@@ -1,0 +1,142 @@
+# colposcopia.spec
+block_cipher = None
+
+a = Analysis(
+    ['colposcopia.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        ('icon_app-02.ico', '.'),
+    ],
+    hiddenimports=[
+        # Python standard
+        'sqlite3',
+        'json',
+        'os',
+        'sys',
+        'shutil',
+        'zipfile',
+        'datetime',
+        'win32print',
+        'win32api',
+        'win32con',
+        'pywintypes',
+
+        # Pillow
+        'PIL',
+        'PIL.Image',
+        'PIL.ImageTk',
+        'PIL.ImageOps',
+        'PIL.ImageFilter',
+
+        # ReportLab
+        'reportlab',
+        'reportlab.pdfgen',
+        'reportlab.pdfgen.canvas',
+        'reportlab.lib',
+        'reportlab.lib.units',
+        'reportlab.lib.pagesizes',
+        'reportlab.lib.colors',
+        'reportlab.lib.styles',
+        'reportlab.lib.utils',
+        'reportlab.pdfbase',
+        'reportlab.pdfbase.pdfmetrics',
+        'reportlab.pdfbase.ttfonts',
+        'reportlab.platypus',
+
+        # CustomTkinter
+        'customtkinter',
+        'customtkinter.windows',
+        'customtkinter.windows.app',
+        'customtkinter.windows.ctk_tk',
+        'customtkinter.windows.ctk_toplevel',
+        'customtkinter.windows.widgets',
+        'customtkinter.windows.widgets.ctk_button',
+        'customtkinter.windows.widgets.ctk_checkbox',
+        'customtkinter.windows.widgets.ctk_combobox',
+        'customtkinter.windows.widgets.ctk_entry',
+        'customtkinter.windows.widgets.ctk_frame',
+        'customtkinter.windows.widgets.ctk_image',
+        'customtkinter.windows.widgets.ctk_label',
+        'customtkinter.windows.widgets.ctk_optionmenu',
+        'customtkinter.windows.widgets.ctk_progressbar',
+        'customtkinter.windows.widgets.ctk_radiobutton',
+        'customtkinter.windows.widgets.ctk_scrollable_frame',
+        'customtkinter.windows.widgets.ctk_scrollbar',
+        'customtkinter.windows.widgets.ctk_segmented_button',
+        'customtkinter.windows.widgets.ctk_slider',
+        'customtkinter.windows.widgets.ctk_switch',
+        'customtkinter.windows.widgets.ctk_tabview',
+        'customtkinter.windows.widgets.ctk_textbox',
+        'customtkinter.windows.widgets.appearance_mode',
+        'customtkinter.windows.widgets.appearance_mode.appearance_mode_base_class',
+        'customtkinter.windows.widgets.appearance_mode.appearance_mode_tracker',
+        'customtkinter.windows.widgets.core_rendering',
+        'customtkinter.windows.widgets.core_rendering.ctk_canvas',
+        'customtkinter.windows.widgets.core_rendering.draw_engine',
+        'customtkinter.windows.widgets.core_widget_classes',
+        'customtkinter.windows.widgets.font',
+        'customtkinter.windows.widgets.font.ctk_font',
+        'customtkinter.windows.widgets.font.font_manager',
+        'customtkinter.windows.widgets.scaling',
+        'customtkinter.windows.widgets.scaling.scaling_base_class',
+        'customtkinter.windows.widgets.scaling.scaling_tracker',
+        'customtkinter.windows.widgets.theme',
+        'customtkinter.windows.widgets.theme.theme_manager',
+        'customtkinter.windows.widgets.utility',
+        'customtkinter.windows.widgets.utility.utility_functions',
+
+        # Darkdetect (dependencia de customtkinter)
+        'darkdetect',
+
+        # Packaging (dependencia de customtkinter)
+        'packaging',
+        'packaging.version',
+        'packaging.specifiers',
+        'packaging.requirements',
+        'packaging.markers',
+
+        # Tkinter
+        'tkinter',
+        'tkinter.ttk',
+        'tkinter.messagebox',
+        'tkinter.filedialog',
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+pyz = PYZ(
+    a.pure,
+    a.zipped_data,
+    cipher=block_cipher
+)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    [],
+    name='Colposcopia',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon='icon_app-02.ico',
+)
