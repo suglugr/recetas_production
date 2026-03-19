@@ -28,8 +28,8 @@ LETTER_WIDTH     = 21.59 * cm
 LETTER_HEIGHT    = 27.94 * cm
 LETTER_PAGE_SIZE = (LETTER_WIDTH, LETTER_HEIGHT)
 
-IMG_W      = 7.5 * cm
-IMG_H      = 6.0 * cm
+IMG_W      = 6.3 * cm
+IMG_H      = 5.0 * cm
 COLS       = 2
 ROWS       = 2
 NUM_IMAGES = COLS * ROWS
