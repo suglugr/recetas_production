@@ -30,7 +30,7 @@ LETTER_PAGE_SIZE = (LETTER_WIDTH, LETTER_HEIGHT)
 
 MARGIN_LEFT      = 2.0 * cm
 MARGIN_RIGHT     = 2.0 * cm
-TOP_MARGIN       = 3.92 * cm
+TOP_MARGIN       = 3.65 * cm
 NAME_X           = 3.3 * cm
 AGE_X            = 2.0 * cm + 11.5 * cm
 DATE_X           = 3.5 * cm + 11.2 * cm + 3.0 * cm
